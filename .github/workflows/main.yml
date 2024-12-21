@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo "Hello, World!"
+
+  list-contents:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List current directory contents
+        run: ls -al
