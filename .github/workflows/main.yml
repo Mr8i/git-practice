@@ -15,12 +15,12 @@ jobs:
   list-contents:
     runs-on: ubuntu-latest
     steps:
-      - name: List current directory contents
-        run: ls -al
-
-    steps:
       - uses: actions/checkout@v2
+
       - name: Run script.sh
         run: |
           chmod +x script.sh
           ./script.sh
+
+      - name: List current directory contents
+        run: ls -al
